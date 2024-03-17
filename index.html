@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jackson Feist | Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Lato', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    /* Header */
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 48px;
+      margin: 0;
+    }
+
+    /* Sections */
+    section {
+      padding: 40px;
+    }
+
+    section h2 {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    /* Projects */
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .project-card {
+      width: 200px;
+      margin: 10px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    .project-card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .project-card-content {
+      padding: 10px;
+    }
+
+    .project-card-content h3 {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    /* Vertical project cards */
+    .project-card.vertical {
+      width: 150px;
+    }
+
+    .project-card.vertical img {
+      height: 300px;
+      width: auto;
+      object-fit: cover;
+    }
+
+    /* Work Experience */
+    .experience {
+      margin-bottom: 40px;
+    }
+
+    .experience h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .experience p {
+      margin-bottom: 5px;
+    }
+
+    /* References */
+    .reference {
+      margin-bottom: 20px;
+    }
+
+    .reference h3 {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    /* Education */
+    .education {
+      margin-bottom: 20px;
+    }
+
+    .education h3 {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    /* Skills */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .skill {
+      background-color: #333;
+      color: #fff;
+      padding: 8px 16px;
+      margin: 5px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Jackson Feist</h1>
+  </header>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <img src="manHuntPhoto.png" alt="MAN_HUNT_PHOTO">
+        <div class="project-card-content">
+          <h3>MAN_HUNT</h3>
+          <p>Multiplayer location tracking real-life tag game. Created using Javascript, React Native, and Firebase.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="ruffRescuePhoto.png" alt="ruffRescuePhoto">
+        <div class="project-card-content">
+          <h3>Ruff Rescue</h3>
+          <p>Dog Shelter management sim. Utilizes a LLM Chatbot AI to create realistic NPC interactions. Created using Unity and C#.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="writhePhoto.png" alt="Project 2">
+        <div class="project-card-content">
+          <h3>Writhe</h3>
+          <p>2D top down rogue-lite shooter created using Unity and C#. Created by my team and I at Inorganic Games. I worked as lead developer organizing and delegating responsibilities amongst the team of 10.</p>
+        </div>
+      </div>
+      <div class="project-card vertical">
+        <img src="sideWalkSoccer.jpg" alt="Project 2">
+        <div class="project-card-content">
+          <h3>Sidewalk Soccer</h3>
+          <p>3D mobile endless runner created using Unity and C#.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="boulderBattlePhoto.png" alt="Project 2">
+        <div class="project-card-content">
+          <h3>Boulder Battle</h3>
+          <p>3D local multiplayer party game created using Unity and C#.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="impulsePhoto.png" alt="Project 2">
+        <div class="project-card-content">
+          <h3>Impulse</h3>
+          <p>2D mobile puzzle platformer using Unity and C#</p>
+        </div>
+      </div>
+      <div class="project-card vertical">
+        <img src="renaissanceRunnerPhoto.png" alt="Project 2">
+        <div class="project-card-content">
+          <h3>Renaissance Runner</h3>
+          <p>2D mobile endless runner using Unity and C#</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">Unity</div>
+      <div class="skill">C#</div>
+      <div class="skill">C</div>
+      <div class="skill">C++</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">React Native</div>
+      <div class="skill">React</div>
+      <div class="skill">Linux</div>
+      <div class="skill">Firebase</div>
+      <div class="skill">SQL</div>
+      <div class="skill">Git</div>
+      <div class="skill">Project Management</div>
+      <div class="skill">Leadership</div>
+      <div class="skill">Communication</div>
+      <div class="skill">Problem-Solving</div>
+      <div class="skill">Teamwork</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Work Experience</h2>
+    <div class="experience">
+      <h3>Founder and Lead Developer</h3>
+      <p>Inorganic Games</p>
+      <p>July 2023 - Present</p>
+      <p>Job description goes here...</p>
+    </div>
+    <div class="experience">
+      <h3>CTO</h3>
+      <p>Sidewalk Soccer LLC</p>
+      <p>January 2022 - Present</p>
+      <p>Job description goes here...</p>
+    </div>
+    <div class="experience">
+        <h3>Member Sales Representative</h3>
+        <p>Oakway FIIT</p>
+        <p>March 2022 - June 2023</p>
+        <p>Worked customer service at the front desk, gave tours, answered phones, and performed cleaning and upkeep duties around the gym. I developed customer relations and communication skills.</p>
+      </div>
+  </section>
+
+  <section>
+    <h2>Reference</h2>
+    <div class="reference">
+      <h3>Maarten Van Zee</h3>
+      <p>CEO, Sidewalk Soccer LLC</p>
+      <p>maarten.van.zee@gmail.com</p>
+      <p>541-740-9738</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="education">
+      <h3>University of Oregon</h3>
+      <p>Current 3rd Year Student in the Lundquist College of Business</p>
+      <p>Minoring in Computer Information Technology</p>
+      <p>Presidential Scholar</p>
+      <p>Expected Graduation Spring 2025</p>
+    </div>
+    <div class="education">
+      <h3>Sheldon High School</h3>
+      <p>Honors Program</p>
+      <p>National Honor Society</p>
+      <p>Graduated 2021</p>
+    </div>
+  </section>
+</body>
+</html>
