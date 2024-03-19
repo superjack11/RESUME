@@ -20,6 +20,7 @@
       color: #fff;
       padding: 20px;
       text-align: center;
+      position: relative; /* Add this line */
     }
 
     header h1 {
@@ -30,7 +31,7 @@
 
     /* Sections */
     section {
-      padding: 40px;
+      padding: 10px;
     }
 
     section h2 {
@@ -47,7 +48,7 @@
     }
 
     .project-card {
-      width: 200px;
+      width: 300px;
       margin: 10px;
       background-color: #fff;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -88,6 +89,12 @@
     /* Work Experience */
     .experience {
       margin-bottom: 40px;
+      background-color: antiquewhite;
+      border-radius: 20px;
+      width: 60%;
+      padding: 30px;
+      padding-top: 1px;
+
     }
 
     .experience h3 {
@@ -102,6 +109,11 @@
     /* References */
     .reference {
       margin-bottom: 20px;
+      background-color: antiquewhite;
+      border-radius: 20px;
+      width: 60%;
+      padding: 30px;
+      padding-top: 1px;
     }
 
     .reference h3 {
@@ -112,6 +124,21 @@
     /* Education */
     .education {
       margin-bottom: 20px;
+      background-color: antiquewhite;
+      border-radius: 20px;
+      width: 60%;
+      padding: 30px;
+      padding-top: 1px;
+    }
+
+    .aboutMe {
+      margin-bottom: 20px;
+      background-color: antiquewhite;
+      border-radius: 20px;
+      width: 60%;
+      padding: 30px;
+      padding-top: 1px;
+      padding-bottom: 10px;
     }
 
     .education h3 {
@@ -134,16 +161,79 @@
       border-radius: 20px;
       font-size: 14px;
     }
+
+    .contact {
+        text-align: center;
+        align-items: center;
+        margin-top: 20px;
+        color: white;
+    }
+
+    .photo {
+  height: 159px;
+  float: left; /* Add this line */
+  margin-right: 20px; /* Add this line */
+  margin-left: 0px;
+  left: 0px;
+
+}
+
+    .photo-container {
+      position: absolute;
+      left: 0px; /* Adjust the value to control the distance from the left */
+      top: 0px; /* Adjust the value to control the distance from the top */
+    }
   </style>
 </head>
 <body>
   <header>
+    <div class="photo-container">
+      <img class="photo" src="seniorPhoto.jpeg" alt="Me">
+    </div>
     <h1>Jackson Feist</h1>
+    <h4 class="contact">541-543-8649  |  jacksonfeist@gmail.com  |  <a class="contact" href="https://www.linkedin.com/in/jack-feist-a6692122b/">LinkedIn</a> </h4>
   </header>
+
+  <section>
+    <h2>About Me</h2>
+    <div class="aboutMe">
+      <p>   I was born, raised, and am now attending college in Eugene, Oregon. In my free time, I like running, cooking, playing chess, and weightlifting. My family and I have been pet fosters with Lucky Paws for over 10 years, giving me a love for animals. I also volunteer for the Grassroots Garden and Food for Lane County.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Work Experience</h2>
+    <div class="experience">
+      <h3>Founder and Lead Developer</h3>
+      <p>Inorganic Games LLC</p>
+      <p>July 2023 - Present</p>
+      <p>In my position as lead developer, I planned and organized projects, hired team members, and facilitated and instructed the development of the project from inception to distribution. 
+        This experience has provided me with invaluable leadership, teamwork, and project management skills. </p>
+    </div>
+    <div class="experience">
+      <h3>Chief Technology Officer</h3>
+      <p>Sidewalk Soccer LLC</p>
+      <p>January 2022 - Present</p>
+      <p>In my position as CTO, I developed a software application for the company and participated in the procurement of a publishing deal for the product. My experience at Sidewalk Soccer LLC helped me develop my teamwork, interpersonal, and project management skills. </p>
+    </div>
+    <div class="experience">
+        <h3>Member Sales Representative</h3>
+        <p>Oakway FIIT</p>
+        <p>March 2022 - June 2023</p>
+        <p>Provided customer service at the front desk, gave tours, answered phones, and performed cleaning and upkeep duties around the gym. I developed customer relations and communication skills during my time in this position.</p>
+      </div>
+  </section>
 
   <section>
     <h2>Projects</h2>
     <div class="projects">
+      <div class="project-card">
+        <img src="neuralNetworkPhoto.png" alt="MAN_HUNT_PHOTO">
+        <div class="project-card-content">
+          <h3>Image Recognition Neural Network</h3>
+          <p>Using PyTorch, I trained an image recognition neural network on the CIFAR-10 dataset. This gave me an understanding of how neural networks and machine learning functions, as well as improved my knowledge of PyTorch.</p>
+        </div>
+      </div>
       <div class="project-card">
         <img src="manHuntPhoto.png" alt="MAN_HUNT_PHOTO">
         <div class="project-card-content">
@@ -165,8 +255,8 @@
           <p>2D top down rogue-lite shooter created using Unity and C#. Created by my team and I at Inorganic Games. I worked as lead developer organizing and delegating responsibilities amongst the team of 10.</p>
         </div>
       </div>
-      <div class="project-card vertical">
-        <img src="sideWalkSoccer.jpg" alt="Project 2">
+      <div class="project-card">
+        <img src="sideWalkSoccerPhoto.png" alt="Project 2">
         <div class="project-card-content">
           <h3>Sidewalk Soccer</h3>
           <p>3D mobile endless runner created using Unity and C#.</p>
@@ -186,7 +276,7 @@
           <p>2D mobile puzzle platformer using Unity and C#</p>
         </div>
       </div>
-      <div class="project-card vertical">
+      <div class="project-card">
         <img src="renaissanceRunnerPhoto.png" alt="Project 2">
         <div class="project-card-content">
           <h3>Renaissance Runner</h3>
@@ -203,9 +293,12 @@
       <div class="skill">C#</div>
       <div class="skill">C</div>
       <div class="skill">C++</div>
+      <div class="skill">Python</div>
+      <div class="skill">PyTorch</div>
       <div class="skill">JavaScript</div>
       <div class="skill">React Native</div>
       <div class="skill">React</div>
+      <div class="skill">HTML / CSS</div>
       <div class="skill">Linux</div>
       <div class="skill">Firebase</div>
       <div class="skill">SQL</div>
@@ -215,38 +308,31 @@
       <div class="skill">Communication</div>
       <div class="skill">Problem-Solving</div>
       <div class="skill">Teamwork</div>
+      <div class="skill">Fast Learning</div>
+      <div class="skill">Public Speaking</div>
+
     </div>
   </section>
 
   <section>
-    <h2>Work Experience</h2>
-    <div class="experience">
-      <h3>Founder and Lead Developer</h3>
-      <p>Inorganic Games</p>
-      <p>July 2023 - Present</p>
-      <p>Job description goes here...</p>
-    </div>
-    <div class="experience">
-      <h3>CTO</h3>
-      <p>Sidewalk Soccer LLC</p>
-      <p>January 2022 - Present</p>
-      <p>Job description goes here...</p>
-    </div>
-    <div class="experience">
-        <h3>Member Sales Representative</h3>
-        <p>Oakway FIIT</p>
-        <p>March 2022 - June 2023</p>
-        <p>Worked customer service at the front desk, gave tours, answered phones, and performed cleaning and upkeep duties around the gym. I developed customer relations and communication skills.</p>
-      </div>
-  </section>
-
-  <section>
-    <h2>Reference</h2>
+    <h2>References</h2>
     <div class="reference">
       <h3>Maarten Van Zee</h3>
       <p>CEO, Sidewalk Soccer LLC</p>
       <p>maarten.van.zee@gmail.com</p>
       <p>541-740-9738</p>
+    </div>
+    <div class="reference">
+      <h3>Lauren Anderson</h3>
+      <p>Director, Warsaw Sports Business Center</p>
+      <p>la7@uoregon.edu</p>
+      <p>541-346-9653</p>
+    </div>
+    <div class="reference">
+      <h3>Jeff Sorensen</h3>
+      <p>Director, Lundquist Center for Entrepreneurship</p>
+      <p>jeff@uoregon.edu</p>
+      <p>541-346-7586</p>
     </div>
   </section>
 
@@ -258,6 +344,13 @@
       <p>Minoring in Computer Information Technology</p>
       <p>Presidential Scholar</p>
       <p>Expected Graduation Spring 2025</p>
+      <p><b>Clubs</b></p>
+      <ul>
+        <li>Oregon Innovation Challenge</li>
+        <li>Chess Club</li>
+        <li>Game Development Club</li>
+        <li>Running Club</li>
+      </ul>
     </div>
     <div class="education">
       <h3>Sheldon High School</h3>
