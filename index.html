@@ -11,16 +11,38 @@
       font-family: 'Lato', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f5f5f5;
+      background-color: #a2a2a2;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    /* Layout Container */
+    .layout { 
+      display: flex;
+      justify-content: space-between;
+      margin: 20px;
+    }
+
+    /* Left Column */
+    .left-column {
+      width: 30%;
+      margin-right: 10px;
+    }
+
+    /* Right Column */
+    .right-column {
+      width: 75%;
     }
 
     /* Header */
     header {
-      background-color: #333;
+      background-color: #000;
       color: #fff;
       padding: 20px;
       text-align: center;
-      position: relative; /* Add this line */
+      position: relative;
     }
 
     header h1 {
@@ -49,8 +71,8 @@
 
     .project-card {
       width: 300px;
-      margin: 10px;
-      background-color: #fff;
+      margin: 5px;
+      background-color: #f4f4f4;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
       transition: 0.3s;
       border-radius: 15px;
@@ -89,8 +111,6 @@
     /* Work Experience */
     .experience {
       margin-bottom: 40px;
-      background-color: antiquewhite;
-      border-radius: 20px;
       width: 60%;
       padding: 30px;
       padding-top: 1px;
@@ -115,8 +135,6 @@
     /* References */
     .reference {
       margin-bottom: 20px;
-      background-color: antiquewhite;
-      border-radius: 20px;
       width: 60%;
       padding: 30px;
       padding-top: 1px;
@@ -130,22 +148,30 @@
     /* Education */
     .education {
       margin-bottom: 20px;
-      background-color: antiquewhite;
       border-radius: 20px;
       width: 60%;
       padding: 30px;
       padding-top: 1px;
+      border-color: black;
+      border-width: 10px;
     }
 
     .aboutMe {
       margin-bottom: 20px;
-      background-color: antiquewhite;
       border-radius: 20px;
       width: 60%;
       padding: 30px;
       padding-top: 1px;
       padding-bottom: 10px;
     }
+
+    .reference, .education, .aboutMe, .experience, .project-card {
+      border: 5px solid black;
+      box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      background-color: #f4f4f4;
+
+    } 
 
     .education h3 {
       font-size: 20px;
@@ -189,17 +215,87 @@
       left: 0px; /* Adjust the value to control the distance from the left */
       top: 0px; /* Adjust the value to control the distance from the top */
     }
+/* Header */
+header {
+  background-color: #000;
+  color: #fff;
+  width: 100%;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px; /* Adjust this value as needed */
+  margin: 0 auto;
+}
+
+.photo-container {
+  flex: 0 0 auto;
+  width: 20%; /* Reduced from 30% */
+  max-width: 206px; /* Reduced from 300px */
+}
+
+.photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.text-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+header h1 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 48px;
+  margin: 0 0 0;
+  text-align: center;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.contact-info a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px; /* Adjust as needed */
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
   </style>
 </head>
 <body>
   <header>
-    <div class="photo-container">
-      <img class="photo" src="seniorPhoto.jpeg" alt="Me">
+    <div class="header-content">
+      <div class="photo-container">
+        <img class="photo" src="seniorPhoto.jpeg" alt="Me">
+      </div>
+      <div class="text-content">
+        <h1>Jackson Feist</h1>
+        <div class="contact-info">
+          <a href="tel:5415438649">(541) 543 8649</a>
+          <a href="mailto:jacksonfeist@gmail.com">jacksonfeist@gmail.com</a>
+          <a href="https://www.linkedin.com/in/jack-feist-a6692122b/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
     </div>
-    <h1>Jackson Feist</h1>
-    <h4 class="contact">541-543-8649  |  jacksonfeist@gmail.com  |  <a class="contact" href="https://www.linkedin.com/in/jack-feist-a6692122b/">LinkedIn</a> </h4>
   </header>
 
+  <!-- Main Layout -->
+  <div class="layout">
+    <!-- Left Column -->
+    <div class="left-column">
   <section>
     <h2>About Me</h2>
     <div class="aboutMe">
@@ -219,7 +315,7 @@
     <div class="experience">
       <h3>Chief Technology Officer</h3>
       <p>Sidewalk Soccer LLC</p>
-      <p>January 2022 - Present</p>
+      <p>January 2022 - August 2023</p>
       <p>In my position as CTO, I developed a software application for the company and participated in the procurement of a publishing deal for the product. My experience at Sidewalk Soccer LLC helped me develop my teamwork, interpersonal, and project management skills. </p>
     </div>
     <div class="experience">
@@ -229,10 +325,23 @@
         <p>Provided customer service at the front desk, gave tours, answered phones, and performed cleaning and upkeep duties around the gym. I developed customer relations and communication skills during my time in this position.</p>
       </div>
   </section>
+  </div>
 
+  <div class="right-column">
   <section>
     <h2>Projects</h2>
+    
     <div class="projects">
+      <div class="project-card">
+        <img src="purrfectAlchemyPhoto.png" alt="Purrfect Alchemy Screenshot" href="https://store.steampowered.com/app/3124780/Purrfect_Alchemy/">
+        <div class="project-card-content">
+          <h3>Purrfect Alchemy</h3>
+          <p>Local multiplayer wave survival wizard cat game created with Unity and C#. This project improved my skills in project management and leadership. This project was developed over a summer with a team of 9 interns at Inorganic Games.</p>
+          <div class="appStoreLink">
+          <a href="https://store.steampowered.com/app/3124780/Purrfect_Alchemy/" target="_blank" rel="noopener noreferrer">Steam Page</a>
+        </div>
+        </div>
+      </div>
       <div class="project-card">
         <img src="neuralNetworkPhoto.png" alt="Neural Network">
         <div class="project-card-content">
@@ -246,7 +355,7 @@
           <h3>MAN_HUNT</h3>
           <p>Multiplayer location tracking real-life tag game. Created using Javascript, React Native, and Firebase.</p>
           <div class="appStoreLink">
-            <a href="https://apps.apple.com/us/app/man-hunt/id6473125600">App Store Page</a>
+            <a href="https://apps.apple.com/us/app/man-hunt/id6473125600" target="_blank" rel="noopener noreferrer">App Store Page</a>
           </div>
         </div>
       </div>
@@ -305,12 +414,14 @@
           <h3>Sonic Charades</h3>
           <p>A charades-like party game made from Javascript with React Native. This project improved my familiarity with UI design and mobile development.</p>
           <div class="appStoreLink">
-            <a href="https://apps.apple.com/us/app/sonic-charades/id6480328193">App Store Page</a>
+            <a href="https://apps.apple.com/us/app/sonic-charades/id6480328193" target="_blank" rel="noopener noreferrer">App Store Page</a>
           </div>
         </div>
       </div>
     </div>
   </section>
+  </div>
+  </div>
 
   <section>
     <h2>Skills</h2>
@@ -340,6 +451,9 @@
     </div>
   </section>
 
+  <div class="layout">
+    <div class="left-column">
+
   <section>
     <h2>References</h2>
     <div class="reference">
@@ -361,7 +475,9 @@
       <p>541-346-7586</p>
     </div>
   </section>
+  </div>
 
+  <div class="right-column">
   <section>
     <h2>Education</h2>
     <div class="education">
@@ -385,5 +501,19 @@
       <p>Graduated 2021</p>
     </div>
   </section>
+  </div>
+  </div>
 </body>
+<script>
+  function toggleDescription(button) {
+    const description = button.previousElementSibling;
+    if (description.style.display === "none") {
+      description.style.display = "block";
+      button.textContent = "See Less";
+    } else {
+      description.style.display = "none";
+      button.textContent = "See More";
+    }
+  }
+</script>
 </html>
